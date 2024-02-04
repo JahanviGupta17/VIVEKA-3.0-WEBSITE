@@ -1,10 +1,4 @@
-/**
-* Template Name: TheEvent
-* Updated: Jan 29 2024 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 (function() {
   "use strict";
 
@@ -101,12 +95,24 @@
   let backtotop = select('.back-to-top')
   if (backtotop) {
     const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
-        backtotop.classList.add('active')
-      } else {
-        backtotop.classList.remove('active')
-      }
-    }
+  if (window.scrollY > 100) {
+    backtotop.classList.add('active');
+    backtotop.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  } else {
+    backtotop.classList.remove('active');
+    backtotop.removeEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+};
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
