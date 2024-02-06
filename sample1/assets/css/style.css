@@ -1520,6 +1520,7 @@ h6 {
 
 #footer .footer-top .footer-info {
   margin: auto;
+  margin-top: -90px;
   
 }
 
@@ -1544,6 +1545,7 @@ h6 {
   margin-bottom: 0;
   font-family: "Raleway", sans-serif;
   color: #fff;
+  margin-top: -15%;
 }
 
 #footer .footer-top .social-links a {
